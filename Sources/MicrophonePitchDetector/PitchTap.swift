@@ -22,6 +22,10 @@ final class PitchTap {
                 self?.analyzePitch(buffer: buffer)
             }
     }
+    func stop(){
+        input.avAudioNode.engine?.stop()
+        input.avAudioNode.reset()
+    }
 
     // MARK: - Lifecycle
 
